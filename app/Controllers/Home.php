@@ -17,14 +17,9 @@ class Home extends BaseController
         
         return view('login_page');
     }
-    public function register()
-    {
-        if(array_key_exists('user_session',session()->get())){
-            return redirect()->to('admin');
-        }
-        
-        return view('register_page');
-    }
+
+    
+
     public function admin()
     {
         if(array_key_exists('user_session',session()->get())){
